@@ -1,4 +1,5 @@
 <template>
+<!-- Search Area  -->
   <div class="row">
 						<div class="column">
                 <form @submit.prevent="SearchProducts()" class="row row-center">
@@ -7,6 +8,7 @@
                 </form>
             </div>
   </div>
+  <!-- Search Results Listing  -->
   <div class="product-row">
             <div  v-for="product in products" :key="product.id"  class="product product-column">   
                     <router-link :to="'/product/'+product.id" class="product-link">
@@ -28,6 +30,13 @@ import{ref} from 'vue';
 export default {
       setup()
       {
+        /*
+        Get value from the search field 
+        make an api call
+        push data in products variable
+        reset the form
+        return values
+        */
             const search = ref("");
             const products = ref([]);
             const SearchProducts = () => {

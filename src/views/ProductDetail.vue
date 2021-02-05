@@ -1,4 +1,5 @@
 <template>
+<!-- Product Details Listing  -->
 <div class="row">
     <div class="column">
       <img :src="product.image_link" :alt="product.name"> 
@@ -17,6 +18,12 @@ import { ref, onBeforeMount } from 'vue';
 import { useRoute } from 'vue-router';
 export default {
 setup(){
+        /*
+        Get value from the route params (id)
+        make an api call
+        push data in product variable
+        return values
+        */  
         const product = ref({});
         const route = useRoute();
 

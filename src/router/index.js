@@ -5,12 +5,12 @@ import ProductDetail from '../views/ProductDetail.vue'
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'Home',               /*Search field and listing*/
     component: Home
   },
   {
     path: '/product/:id',
-    name: 'Product Details',
+    name: 'Product Details',    /*Listing page for a single product*/
     component: ProductDetail
   }
 ]
